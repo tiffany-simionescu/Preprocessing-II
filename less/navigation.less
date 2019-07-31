@@ -1,1 +1,26 @@
-// Navigation Styles here
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+  margin: 0 auto;
+  padding: 3rem 0;
+
+  h1 {
+    margin: auto 0;
+  }
+
+  nav {
+    margin: auto 0;
+
+    a {
+      font-size: 1.6rem;
+      margin: auto 2rem;
+      text-decoration: none;
+      color: black;
+
+      &:hover {
+        color: lighten(black, 50%);
+      }
+    }
+  }
+}

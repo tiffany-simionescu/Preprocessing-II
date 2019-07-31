@@ -1,13 +1,26 @@
-.home {
+header {
+  .border {
+    .border-top();
 
+    .header-img {
+      .header();
+    }
+
+    .top-content {
+      .header();
+      padding: 2rem 0;
+      .border-bottom();
+    }
+  }
+}
+
+.home {
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -25,7 +38,7 @@
 
   .inverse-content {
     padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
+    .border-bottom();
 
     .text-content {
       padding-left: 1%;
@@ -49,13 +62,17 @@
 
   .content-pick {
     padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
+    .border-top();
     display: flex;
     justify-content: space-between;
 
     .destination {
       width: 30%;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
+
+      .btn {
+        .button(@eastern-blue);
+      }
     }
   }
-}// home
+} // home
