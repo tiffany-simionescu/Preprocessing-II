@@ -1,1 +1,32 @@
-// Mixins in here
+.header {
+  margin: 0 auto;
+  width: 800px;
+}
+.border-top {
+  border-top: 2px dashed @navigation-border;
+}
+
+.border-bottom {
+  border-bottom: 2px dashed @navigation-border;
+}
+
+.button(@background-color) {
+  margin-top: 1rem;
+  a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: white;
+    background-color: @background-color;
+    padding: 1rem 5rem;
+    border-radius: 1rem;
+
+    &:hover {
+      background-color: darken(@background-color, 5%);
+    }
+
+    @media @mobile {
+      padding: 1rem 12.5rem;
+      margin: auto;
+    }
+  }
+}
