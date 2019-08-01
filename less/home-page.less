@@ -4,12 +4,20 @@ header {
 
     .header-img {
       .header();
+
+      @media @mobile {
+        max-width: 480px;
+      }
     }
 
     .top-content {
       .header();
       padding: 2rem 0;
       .border-bottom();
+
+      @media @mobile {
+        max-width: 470px;
+      }
     }
   }
 }
@@ -21,17 +29,35 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-direction: column;
+      margin: 3rem 2rem;
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        min-width: 470px;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 95%;
+        padding: 0;
+      }
+
       img {
         border-radius: 10px;
+
+        @media @mobile {
+          width: 500px;
+        }
       }
     }
   }
@@ -40,39 +66,57 @@ header {
     padding-bottom: 30px;
     .border-bottom();
 
-    .text-content {
-      padding-left: 1%;
-      padding-right: 0;
-    }
-
-    .img-content {
-      padding-right: 1%;
-      padding-left: 0;
+    @media @mobile {
+      flex-direction: column-reverse;
+      min-width: 470px;
     }
   }
 
-  .content-destination {
-    width: 75%;
-    margin: 0 auto 30px;
-
-    img {
-      border-radius: 10px;
-    }
+  .text-content {
+    padding-left: 1%;
+    padding-right: 0;
   }
 
-  .content-pick {
-    padding-top: 30px;
-    .border-top();
-    display: flex;
-    justify-content: space-between;
+  .img-content {
+    padding-right: 1%;
+    padding-left: 0;
+  }
+}
 
-    .destination {
-      width: 30%;
-      margin-bottom: 40px;
+.content-destination {
+  width: 75%;
+  margin: 0 auto 3rem;
 
-      .btn {
-        .button(@eastern-blue);
-      }
+  img {
+    border-radius: 10px;
+  }
+
+  @media @mobile {
+    width: 90%;
+  }
+}
+
+.content-pick {
+  padding-top: 30px;
+  .border-top();
+  display: flex;
+  justify-content: space-between;
+
+  @media @mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .destination {
+    width: 30%;
+    margin-bottom: 40px;
+
+    @media @mobile {
+      width: 70%;
+    }
+
+    .btn {
+      .button(@eastern-blue);
     }
   }
-} // home
+}

@@ -3,10 +3,10 @@
   width: 800px;
 }
 .border-top {
-  border-top: 2px dashed #C0C0C0;
+  border-top: 2px dashed #c0c0c0;
 }
 .border-bottom {
-  border-bottom: 2px dashed #C0C0C0;
+  border-bottom: 2px dashed #c0c0c0;
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -185,11 +185,28 @@ img {
   margin: 0 auto;
   padding: 3rem 0;
 }
+@media (max-width: 500px) {
+  .nav {
+    max-width: 500px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
 .nav h1 {
   margin: auto 0;
 }
+@media (max-width: 500px) {
+  .nav h1 {
+    padding-bottom: 2rem;
+  }
+}
 .nav nav {
   margin: auto 0;
+}
+@media (max-width: 500px) {
+  .nav nav {
+    margin-bottom: -1.2rem;
+  }
 }
 .nav nav a {
   font-size: 1.6rem;
@@ -200,10 +217,15 @@ img {
 .nav nav a:hover {
   color: #808080;
 }
+@media (max-width: 500px) {
+  .nav nav a {
+    margin: auto 3.5rem;
+  }
+}
 .footer {
   width: 100%;
   border-top: 2px dashed silver;
-  background: #FFEBCD;
+  background: #ffebcd;
 }
 .footer p {
   text-align: center;
@@ -212,17 +234,27 @@ img {
   padding: 20px;
 }
 header .border {
-  border-top: 2px dashed #C0C0C0;
+  border-top: 2px dashed #c0c0c0;
 }
 header .border .header-img {
   margin: 0 auto;
   width: 800px;
 }
+@media (max-width: 500px) {
+  header .border .header-img {
+    max-width: 480px;
+  }
+}
 header .border .top-content {
   margin: 0 auto;
   width: 800px;
   padding: 2rem 0;
-  border-bottom: 2px dashed #C0C0C0;
+  border-bottom: 2px dashed #c0c0c0;
+}
+@media (max-width: 500px) {
+  header .border .top-content {
+    max-width: 470px;
+  }
 }
 .home .content-section {
   margin: 30px 0;
@@ -230,57 +262,107 @@ header .border .top-content {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-section {
+    flex-direction: column;
+    margin: 3rem 2rem;
+  }
+}
 .home .content-section .text-content {
   width: 48%;
   padding-right: 1%;
+}
+@media (max-width: 500px) {
+  .home .content-section .text-content {
+    min-width: 470px;
+  }
 }
 .home .content-section .img-content {
   width: 48%;
   padding-left: 1%;
 }
+@media (max-width: 500px) {
+  .home .content-section .img-content {
+    width: 95%;
+    padding: 0;
+  }
+}
 .home .content-section .img-content img {
   border-radius: 10px;
 }
+@media (max-width: 500px) {
+  .home .content-section .img-content img {
+    width: 500px;
+  }
+}
 .home .inverse-content {
   padding-bottom: 30px;
-  border-bottom: 2px dashed #C0C0C0;
+  border-bottom: 2px dashed #c0c0c0;
 }
-.home .inverse-content .text-content {
+@media (max-width: 500px) {
+  .home .inverse-content {
+    flex-direction: column-reverse;
+    min-width: 470px;
+  }
+}
+.home .text-content {
   padding-left: 1%;
   padding-right: 0;
 }
-.home .inverse-content .img-content {
+.home .img-content {
   padding-right: 1%;
   padding-left: 0;
 }
-.home .content-destination {
+.content-destination {
   width: 75%;
-  margin: 0 auto 30px;
+  margin: 0 auto 3rem;
 }
-.home .content-destination img {
+.content-destination img {
   border-radius: 10px;
 }
-.home .content-pick {
+@media (max-width: 500px) {
+  .content-destination {
+    width: 90%;
+  }
+}
+.content-pick {
   padding-top: 30px;
-  border-top: 2px dashed #C0C0C0;
+  border-top: 2px dashed #c0c0c0;
   display: flex;
   justify-content: space-between;
 }
-.home .content-pick .destination {
+@media (max-width: 500px) {
+  .content-pick {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.content-pick .destination {
   width: 30%;
   margin-bottom: 40px;
 }
-.home .content-pick .destination .btn {
+@media (max-width: 500px) {
+  .content-pick .destination {
+    width: 70%;
+  }
+}
+.content-pick .destination .btn {
   margin-top: 1rem;
 }
-.home .content-pick .destination .btn a {
+.content-pick .destination .btn a {
   text-decoration: none;
   font-size: 1.8rem;
   color: white;
-  background-color: #17A2B8;
+  background-color: #17a2b8;
   padding: 1rem 5rem;
   border-radius: 1rem;
 }
-.home .content-pick .destination .btn a:hover {
+.content-pick .destination .btn a:hover {
   background-color: #148ea1;
+}
+@media (max-width: 500px) {
+  .content-pick .destination .btn a {
+    padding: 1rem 12.5rem;
+    margin: auto;
+  }
 }
